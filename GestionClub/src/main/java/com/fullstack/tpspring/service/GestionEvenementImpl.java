@@ -66,14 +66,12 @@ public class GestionEvenementImpl implements IGestionEvenement {
     }
 */
     @Override
-    public void ajouterLogistique(Logistique l, int idEvent) {
+    public void ajouterAffecterLogistique(Logistique l, int idEvent) {
         Evenement event = iEvenementRepository.findById(idEvent).orElse(null);
 
         iLogistiqueRepository.save(l);
         event.getLogs().add(iLogistiqueRepository.findById(l.getId()).orElse(null));
-
         iEvenementRepository.save(event);
     }
-
 
 }

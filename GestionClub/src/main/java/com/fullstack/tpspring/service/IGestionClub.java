@@ -11,4 +11,6 @@ public interface IGestionClub {
     void deleteClub(int id);
 
     void affecerParticipantClub(int idParticipant,int idClub);
+
+    void ajouterAffecerParticipantClub(int idParticipant,Club club);
 }

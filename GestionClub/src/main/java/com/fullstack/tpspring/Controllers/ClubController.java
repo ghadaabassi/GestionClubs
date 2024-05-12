@@ -2,6 +2,7 @@ package com.fullstack.tpspring.Controllers;
 
 import com.fullstack.tpspring.entities.Club;
 import com.fullstack.tpspring.entities.Evenement;
+import com.fullstack.tpspring.entities.Participant;
 import com.fullstack.tpspring.service.IGestionClub;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -35,8 +36,12 @@ public class ClubController {
 
     @PutMapping("/affecterParticipant/{idPart}/{idClub}")
     public void affecerParticipantClub(@PathVariable("idPart") int idPart , @PathVariable("idClub") int idClub) {
-
         iGestionClub.affecerParticipantClub(idPart,idClub);
+    }
 
+    @PutMapping("/ajouterAffecterParticipant/{idPart}")
+    public void ajouterAffecerParticipantClub( @PathVariable("idPart") int idParticipant,@RequestBody Club club) {
+
+         iGestionClub.ajouterAffecerParticipantClub(idParticipant,club);
     }
 }

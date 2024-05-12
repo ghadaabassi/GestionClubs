@@ -61,5 +61,13 @@ public class GestionClubImpl implements IGestionClub {
 
         iClubRepository.save(club);
     }
+    @Override
+    public void ajouterAffecerParticipantClub(int idParticipant, Club club) {
+
+        Participant participant= iParticipantRepository.findById(idParticipant).orElse(null);
+        club.getParticipants().add(participant);
+        iClubRepository.save(club);
+
+    }
 
 }

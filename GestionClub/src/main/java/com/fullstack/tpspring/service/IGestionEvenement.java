@@ -13,6 +13,6 @@ public interface IGestionEvenement {
 
     public Evenement affecterClubEvenement(int idClub,int idEvenement);
 
-    public void ajouterLogistique(Logistique l , int idEvent);
+    public void ajouterAffecterLogistique(Logistique l , int idEvent);
 
 }

@@ -45,7 +45,7 @@ public class EvenementController {
     @PutMapping("/ajouterLog/{idevent}")
     public void ajouterLogistique(@RequestBody Logistique l,  @PathVariable("idevent") int idEvent) {
 
-        iGestionEvenement.ajouterLogistique(l,idEvent);
+        iGestionEvenement.ajouterAffecterLogistique(l,idEvent);
     }
 
 }
