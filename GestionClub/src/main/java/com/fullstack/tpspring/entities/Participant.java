@@ -28,4 +28,8 @@ public class Participant implements Serializable {
 
     private List<Evenement> events;
 
+    @ManyToMany(mappedBy = "participants")
+
+    private List<Club> clubs;
+
 }

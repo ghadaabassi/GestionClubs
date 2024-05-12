@@ -23,4 +23,6 @@ public class Club implements Serializable {
     @OneToMany(mappedBy = "club")
     private List<Evenement> events;
 
+    @ManyToMany(cascade = CascadeType.PERSIST)
+    private List<Participant> participants;
 }

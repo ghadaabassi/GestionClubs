@@ -9,4 +9,6 @@ public interface IGestionClub {
     Club getClubById(int id);
     Club updateClub(Club club);
     void deleteClub(int id);
+
+    void affecerParticipantClub(int idParticipant,int idClub);
 }

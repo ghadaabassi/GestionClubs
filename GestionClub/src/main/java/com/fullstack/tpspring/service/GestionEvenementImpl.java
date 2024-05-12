@@ -37,7 +37,7 @@ public class GestionEvenementImpl implements IGestionEvenement {
     }
 
     @Override
-    public Evenement affecterClubEvenement(int idClub, int idEvenement) {
+    public Evenement affecterClubEvenement(int idClub, int idEvenement ) {
 
         Club club = clubRepository.findById(idClub).orElse(null);
         Evenement event= repository.findById(idEvenement).orElse(null);
@@ -45,7 +45,6 @@ public class GestionEvenementImpl implements IGestionEvenement {
         // club.getEvents().add(event);
         //clubRepository.save(club);
         repository.save(event);
-
      return event;
     }
 
