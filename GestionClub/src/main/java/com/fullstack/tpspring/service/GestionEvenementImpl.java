@@ -42,10 +42,9 @@ public class GestionEvenementImpl implements IGestionEvenement {
         Club club = clubRepository.findById(idClub).orElse(null);
         Evenement event= repository.findById(idEvenement).orElse(null);
         event.setClub(club);
-       // club.getEvents().add(event);
+        // club.getEvents().add(event);
         //clubRepository.save(club);
         repository.save(event);
-
 
      return event;
     }
