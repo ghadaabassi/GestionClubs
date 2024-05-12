@@ -2,6 +2,7 @@ package com.fullstack.tpspring.Controllers;
 
 import com.fullstack.tpspring.entities.Club;
 import com.fullstack.tpspring.entities.Evenement;
+import com.fullstack.tpspring.entities.Logistique;
 import com.fullstack.tpspring.service.IGestionClub;
 import com.fullstack.tpspring.service.IGestionEvenement;
 import lombok.AllArgsConstructor;
@@ -41,5 +42,10 @@ public class EvenementController {
         return iGestionEvenement.affecterClubEvenement(idclub,idevent);
     }
 
+    @PutMapping("/ajouterLog/{idevent}")
+    public void ajouterLogistique(@RequestBody Logistique l,  @PathVariable("idevent") int idEvent) {
+
+        iGestionEvenement.ajouterLogistique(l,idEvent);
+    }
 
 }
