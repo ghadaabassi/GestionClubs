@@ -38,7 +38,6 @@ public class ClubController {
     public void affecerParticipantClub(@PathVariable("idPart") int idPart , @PathVariable("idClub") int idClub) {
         iGestionClub.affecerParticipantClub(idPart,idClub);
     }
-
     @PutMapping("/ajouterAffecterParticipant/{idPart}")
     public void ajouterAffecerParticipantClub( @PathVariable("idPart") int idParticipant,@RequestBody Club club) {
 
