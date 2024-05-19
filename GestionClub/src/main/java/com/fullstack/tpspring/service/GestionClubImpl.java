@@ -39,18 +39,6 @@ public class GestionClubImpl implements IGestionClub {
         iClubRepository.deleteById(id);
     }
 
-    /*
-    @Override
-    public void affecerParticipantClub(int idParticipant, int idClub) {
-        Club club = iClubRepository.findById(idClub).orElse(null);
-        Participant participant= iParticipantRepository.findById(idParticipant).orElse(null);
-        club.getEvents().get(0).getParticipants().add(participant);
-
-
-        iClubRepository.save(club);
-
-    }
-    */
 
     @Override
     public void affecerParticipantClub(int idParticipant, int idClub) {
